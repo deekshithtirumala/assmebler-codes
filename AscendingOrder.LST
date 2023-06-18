@@ -1,0 +1,60 @@
+A51 MACRO ASSEMBLER  ASCENDINGORDER                                                       05/13/2023 11:12:04 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN AscendingOrder.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE AscendingOrder.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H;
+0000 7E04              2     MOV R6, #04H;
+0002 900030            3     MOV DPTR, #SRC;
+0005 8E40              4     UP1: MOV 40H, R6;
+0007 7930              5              MOV R1, #30H;
+0009 E7                6              MOV A, @R1;
+000A 09                7              INC R1;
+000B 87F0              8              MOV B, @R1;
+000D B5F00B            9              CJNE A, B, NEXT;
+0010 8010             10              SJMP DOWN;
+                      11     
+0012 E7               12     UP:  MOV A, @R1;
+0013 09               13              INC R1;
+0014 87F0             14              MOV B, @R1;
+0016 B5F002           15              CJNE A, B, NEXT;
+0019 8007             16              SJMP DOWN;
+                      17     
+                      18     
+001B 5005             19     NEXT: JNC DOWN;
+001D F7               20               MOV @R1, A;
+001E 19               21               DEC R1;
+001F A7F0             22               MOV @R1, B;
+0021 09               23               INC R1;
+                      24     
+0022 D540ED           25     DOWN: DJNZ 40H, UP;
+0025 DEDE             26               DJNZ R6, UP1;
+                      27     
+                      28     ;DATA IN ROM
+0030                  29     ORG 30H;
+0030 16374219         30     SRC: DB 22, 55, 66, 25
+                      31               END;
+A51 MACRO ASSEMBLER  ASCENDINGORDER                                                       05/13/2023 11:12:04 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DOWN . . . . . . .  C ADDR   0022H   A   
+NEXT . . . . . . .  C ADDR   001BH   A   
+SRC. . . . . . . .  C ADDR   0030H   A   
+UP . . . . . . . .  C ADDR   0012H   A   
+UP1. . . . . . . .  C ADDR   0005H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

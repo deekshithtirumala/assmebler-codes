@@ -1,0 +1,53 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/13/2023  11:17:29  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE countOneAndZeros.obj TO PROJECT2 RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  countOneAndZeros.obj (COUNTONEANDZEROS)
+
+
+LINK MAP OF MODULE:  PROJECT2 (COUNTONEANDZEROS)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0013H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  PROJECT2 (COUNTONEANDZEROS)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        COUNTONEANDZEROS
+  C:0008H         SYMBOL        LOOP
+  C:0010H         SYMBOL        ONE
+  C:000DH         SYMBOL        ZERO
+  C:0000H         LINE#         5
+  C:0002H         LINE#         6
+  C:0004H         LINE#         7
+  C:0006H         LINE#         9
+  C:0008H         LINE#         10
+  C:0009H         LINE#         11
+  C:000BH         LINE#         12
+  C:000DH         LINE#         14
+  C:000EH         LINE#         15
+  C:0010H         LINE#         17
+  C:0011H         LINE#         18
+  -------         ENDMOD        COUNTONEANDZEROS
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0013H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=19
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
